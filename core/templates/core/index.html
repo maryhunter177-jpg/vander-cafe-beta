@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vander Café - Curadoria Especial</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Playfair+Display:ital,wght@0,700;1,400&display=swap" rel="stylesheet">
+
+    <style>
+        /* --- PALETA DE CORES DA LOGO --- */
+        :root {
+            --fundo-creme: #fdf6e3;   /* Um bege suave, cor de papel antigo */
+            --marrom-cafe: #2e1e18;   /* Marrom bem escuro (quase preto) */
+            --marrom-claro: #5d4037;  /* Marrom chocolate */
+            --verde-folha: #4e6f33;   /* Verde oliva igual da logo */
+            --dourado: #d4a017;       /* Dourado premium */
+        }
+
+        body { 
+            font-family: 'Lato', sans-serif; 
+            background-color: var(--fundo-creme); /* Adeus fundo branco! */
+            background-image: radial-gradient(#e0dcd3 1px, transparent 1px); /* Textura sutil */
+            background-size: 20px 20px;
+            color: var(--marrom-cafe);
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* --- CABEÇALHO ESCURO --- */
+        header {
+            background-color: var(--marrom-cafe);
+            color: var(--fundo-creme);
+            padding: 30px 20px 60px 20px; /* Mais espaço embaixo para a logo 'invadir' */
+            border-bottom: 5px solid var(--dourado);
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+        }
+
+        .logo-container {
+            background-color: var(--fundo-creme);
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            margin: 0 auto -80px auto; /* Margem negativa para a logo descer */
+            border: 4px solid var(--dourado);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            position: relative;
+            z-index: 10;
+        }
+
+        .logo-img {
+            width: 95%; 
+        }
+
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.8em;
+            margin: 20px 0 5px 0;
+            color: var(--fundo-creme);
+            text-shadow: 2px 2px 0px #000;
+        }
+
+        .subtitulo {
+            font-style: italic;
+            color: #dcdcdc;
+            font-size: 1.1em;
+            letter-spacing: 1px;
+        }
+
+        /* --- VITRINE --- */
+        .vitrine { 
+            display: flex; 
+            flex-wrap: wrap; 
+            justify-content: center; 
+            gap: 40px; 
+            padding: 100px 20px 50px 20px; /* Padding extra no topo por causa da logo */
+            max-width: 1200px;
+            margin: 0 auto;
+            flex: 1;
+        }
+
+        /* --- CARTÃO DO CAFÉ --- */
+        .cartao-cafe { 
+            background: white; 
+            border: 1px solid #e0e0e0;
+            border-radius: 8px; 
+            width: 280px; 
+            box-shadow: 5px 5px 0px var(--marrom-claro); /* Sombra "dura" estilo vintage */
+            overflow: hidden;
+            transition: all 0.2s ease;
+        }
+
+        .cartao-cafe:hover {
+            transform: translate(-3px, -3px);
+            box-shadow: 8px 8px 0px var(--dourado);
+        }
+
+        .cartao-cafe img { 
+            width: 100%; 
+            height: 220px; 
+            object-fit: cover; 
+            border-bottom: 3px solid var(--marrom-cafe);
+        }
+
+        .info-cafe {
+            padding: 20px;
+            text-align: left;
+        }
+
+        h3 {
+            font-family: 'Playfair Display', serif;
+            margin: 0 0 5px 0;
+            font-size: 1.5em;
+            color: var(--marrom-cafe);
+        }
+
+        .regiao {
+            color: var(--verde-folha);
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: 0.8em;
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        .preco { 
+            color: var(--marrom-cafe); 
+            font-weight: 900; 
+            font-size: 1.6em; 
+            margin: 10px 0;
+        }
+
+        /* Botão Verde */
+        .btn-prova {
+            display: block;
+            background-color: var(--verde-folha);
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            padding: 12px;
+            border-radius: 4px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 0.9em;
+            transition: background 0.3s;
+        }
+
+        .btn-prova:hover {
+            background-color: var(--marrom-cafe);
+            color: var(--dourado);
+        }
+
+        /* --- RODAPÉ --- */
+        footer {
+            background-color: var(--marrom-cafe);
+            color: var(--fundo-creme);
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+            font-size: 0.9em;
+            border-top: 5px solid var(--dourado);
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Vander Café</h1>
+        <p class="subtitulo">Curadoria do grão à xícara</p>
+        
+        <div class="logo-container">
+            <img src="/media/cafes/logo.png" alt="Vander Café" class="logo-img">
+        </div>
+    </header>
+
+    <div class="vitrine">
+        {% for cafe in cafes %}
+            <div class="cartao-cafe">
+                {% if cafe.foto %}
+                    <img src="{{ cafe.foto.url }}" alt="{{ cafe.nome }}">
+                {% else %}
+                    <div style="height:220px; background:#f4f4f4; display:flex; align-items:center; justify-content:center; color:#ccc;">Sem Foto</div>
+                {% endif %}
+                
+                <div class="info-cafe">
+                    <span class="regiao">📍 {{ cafe.regiao }}</span>
+                    <h3>{{ cafe.nome }}</h3>
+                    <p style="font-size:0.9em; color:#666; height: 40px; overflow:hidden;">{{ cafe.descricao|truncatechars:60 }}</p>
+                    
+                    <div style="display:flex; justify-content:space-between; align-items:center; margin-top:15px;">
+                        <span class="preco">R$ {{ cafe.preco }}</span>
+                        {% if cafe.video_url %}
+                            <a href="{{ cafe.video_url }}" target="_blank" title="Assistir Prova">
+                                📹 Prova
+                            </a>
+                        {% endif %}
+                    </div>
+                    <a href="#" class="btn-prova" style="margin-top: 15px;">Comprar Agora</a>
+                </div>
+            </div>
+        {% empty %}
+            <p>Nenhum café especial disponível hoje.</p>
+        {% endfor %}
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Vander Café - Todos os direitos reservados.</p>
+        <p>Desenvolvido por Mariana Xavier</p>
+    </footer>
+
+</body>
+</html>
