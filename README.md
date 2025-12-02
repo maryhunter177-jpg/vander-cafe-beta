@@ -6,7 +6,9 @@ Este projeto é um **MVP (Produto Mínimo Viável)** de um marketplace focado em
 
 ## 📸 Vitrine do Projeto
 
-![Preview da Vitrine](media/cafes/print_vitrine.png)
+![Preview da Vitrine]<img width="1892" height="987" alt="image" src="https://github.com/user-attachments/assets/2145fb42-55f0-4ea5-9376-48cd330727c7" />
+
+
 *(Você pode adicionar um print da tela aqui depois)*
 
 ## 🚀 Funcionalidades
